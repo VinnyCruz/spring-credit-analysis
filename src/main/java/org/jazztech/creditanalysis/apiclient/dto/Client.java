@@ -1,13 +1,9 @@
 package org.jazztech.creditanalysis.apiclient.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import lombok.Builder;
-import org.hibernate.validator.constraints.br.CPF;
-
-import java.time.LocalDate;
 import java.util.UUID;
+import lombok.Builder;
 
-public record Client (
+public record Client(
     UUID id
 ) {
     @Builder(toBuilder = true)

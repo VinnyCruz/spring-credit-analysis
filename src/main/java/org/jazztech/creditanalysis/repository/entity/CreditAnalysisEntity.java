@@ -1,12 +1,15 @@
 package org.jazztech.creditanalysis.repository.entity;
 
-import jakarta.persistence.*;
-import lombok.Builder;
-import org.hibernate.annotations.Immutable;
-
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
+import lombok.Builder;
+import org.hibernate.annotations.Immutable;
+
 
 @Entity
 @Table(name = "CREDITANALYSIS")
@@ -31,10 +34,9 @@ public class CreditAnalysisEntity {
     }
 
     @Builder
-    public CreditAnalysisEntity
-            (UUID clientId, Boolean approved, BigDecimal approvedLimit,
-             BigDecimal withdraw, BigDecimal annualInterest, BigDecimal requestedAmount,
-             LocalDateTime date) {
+    public CreditAnalysisEntity(UUID clientId, Boolean approved, BigDecimal approvedLimit,
+                                BigDecimal withdraw, BigDecimal annualInterest, BigDecimal requestedAmount,
+                                LocalDateTime date) {
         this.id = UUID.randomUUID();
         this.clientId = clientId;
         this.approved = approved;
@@ -45,33 +47,48 @@ public class CreditAnalysisEntity {
         this.date = date;
     }
 
-    public UUID getId() {return id;}
+    public UUID getId() {
+        return id;
+    }
 
-    public UUID getClientId() {return clientId;}
+    public UUID getClientId() {
+        return clientId;
+    }
 
-    public Boolean getApproved() {return approved;}
+    public Boolean getApproved() {
+        return approved;
+    }
 
-    public BigDecimal getApprovedLimit() {return approvedLimit;}
+    public BigDecimal getApprovedLimit() {
+        return approvedLimit;
+    }
 
-    public BigDecimal getWithdraw() {return withdraw;}
+    public BigDecimal getWithdraw() {
+        return withdraw;
+    }
 
-    public BigDecimal getAnnualInterest() {return annualInterest;}
+    public BigDecimal getAnnualInterest() {
+        return annualInterest;
+    }
 
-    public BigDecimal getRequestedAmount() {return requestedAmount;}
+    public BigDecimal getRequestedAmount() {
+        return requestedAmount;
+    }
 
-    public LocalDateTime getDate() {return date;}
+    public LocalDateTime getDate() {
+        return date;
+    }
 
     @Override
     public String toString() {
-        return "CreditAnalysisEntity{" +
-                "id=" + id +
-                ", clientId=" + clientId +
-                ", approved=" + approved +
-                ", approvedLimit=" + approvedLimit +
-                ", withdraw=" + withdraw +
-                ", annualInterest=" + annualInterest +
-                ", requestedAmount=" + requestedAmount +
-                ", date=" + date +
-                '}';
+        return "CreditAnalysisEntity{"
+        + "id=" + id
+        + ", clientId=" + clientId
+        + ", approved=" + approved
+        + ", approvedLimit=" + approvedLimit
+        + ", withdraw=" + withdraw
+        + ", annualInterest=" + annualInterest
+        + ", requestedAmount=" + requestedAmount
+        + ", date=" + date + '}';
     }
 }

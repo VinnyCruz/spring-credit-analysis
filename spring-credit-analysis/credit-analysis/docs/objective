@@ -1,0 +1,28 @@
+Objetivo
+
+Construir uma aplicação que faça a analise de credito para um cliente e possibilite consulta por ID ou CPF.
+
+Regras:
+
+Deve consultar o id do cliente para validar se o mesmo existe.
+
+O valor máximo de renda mensal considerado no cálculo, deve ser de R$50.000,00.
+
+Se o valor solicitado for maior que a renda mensal, não deve aprovar o crédito.
+
+Caso o valor solicitado seja maior que 50% do valor da renda mensal, deve aprovar 15% do valor da renda mensal como crédito.
+
+Caso o valor solicitado seja menor ou igual de 50% do valor da renda mensal, deve aprovar 30% do valor da renda mensal como crédito.
+
+O valor limite para saque será de 10% do valor aprovado.
+
+O valor do juro anual será de 15%.
+
+As analises poderão ser consultadas pelo id.
+
+Critério de aceite:
+
+A aplicação deve contemplar todas as regras descritas acima.
+A aplicação deve possibilitar consulta por ID e CPF
+Criar testes automatizados para as regras.
+Caso a entrada de dados caia em fluxo de exceção, a aplicação deve retornar mensagens claras de erros.
